@@ -1,8 +1,3 @@
-// Youtube tutorial here: https://youtu.be/LDgPTw6tePk
-
-// These functions are designed to be exported, but you could create a class instead.
-// See tutorial video.
-
 // #1 proper case
 export const properCase = (string) =>
   `${string[0].toUpperCase()}${string.slice(1).toLowerCase()}`;
