@@ -1,14 +1,14 @@
 /* app.js */
 
 import Deck from './deck';
-// import { select, listen } from './util';
+import { select, listen } from './util';
 import './style.css';
 
-const computerCardSlot = document.querySelector('.computer-card-slot');
+const computerCardSlot = select('.computer-card-slot');
 
-const computerDeckElement = document.querySelector('.computer-deck');
+const computerDeckElement = select('.computer-deck');
 
-const text = document.querySelector('.text');
+const text = select('.text');
 
 let computerDeck;
 let score = 0;
@@ -57,28 +57,28 @@ function flipCards(suit) {
 
 // const SUITS = ['♠', '♣', '♥', '♦'];
 
-const game = document.querySelector('.new-game');
-game.addEventListener('click', () => {
+const game = select('.new-game');
+listen(game, 'click', () => {
   startGame();
 });
 
-const diamonds = document.querySelector('.diamonds');
-diamonds.addEventListener('click', () => {
+const diamonds = select('.diamonds');
+listen(diamonds, 'click', () => {
   flipCards('♦');
 });
 
-const clubs = document.querySelector('.clubs');
-clubs.addEventListener('click', () => {
+const clubs = select('.clubs');
+listen(clubs, 'click', () => {
   flipCards('♣');
 });
 
-const hearts = document.querySelector('.hearts');
-hearts.addEventListener('click', () => {
+const hearts = select('.hearts');
+listen(hearts, 'click', () => {
   flipCards('♥');
 });
 
-const spades = document.querySelector('.spades');
-spades.addEventListener('click', () => {
+const spades = select('.spades');
+listen(spades, 'click', () => {
   flipCards('♠');
 });
 
